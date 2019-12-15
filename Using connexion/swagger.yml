@@ -1,0 +1,49 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Posts API Victoria Rhine
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /posts/:
+    get:
+      operationId: "posts.read"
+      tags:
+        - "Posts"
+      summary: "The posts data structure supported by the server application"
+      description: "Read the list of posts"
+      responses:
+        200:
+          description: "Successful read posts list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                user_id:
+                  type: "integer"
+                  readOnly: true
+                username:
+                  type: "string"
+                  readOnly: true
+                timestamp:
+                  type: "string"
+                  readOnly: true
+                details:
+                  type: "string"
+                  readOnly: true
+                location:
+                  type: "string"
+                  readOnly: true
+              required:
+                 - user_id
+                 - username
+                 - timestamp
+                 - details
+                 - location
