@@ -1,0 +1,12 @@
+This project combines POV-Ray and Python to create an animation. 
+
+First, I created a scene in POV-Ray. The scene is of a boat on the ocean. 
+
+Next, I wrote a Python program that reads in the POV-Ray code and inserts multiple objects into a new POV-Ray file "temp". 
+The objects are a sphere and torus that represent a floatie and ball. 
+
+Using the camera in POV-Ray, the Python code slightly changes point-of-view of the scene. 
+Looping through this movement hundreds of times renders pictures that represent this change.
+
+Finally, all photos are combined to create an animation that includes the beginning scene and additional objects. 
+The camera moves about the scene in a helical pattern.
